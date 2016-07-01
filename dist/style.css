@@ -1,6 +1,54 @@
-.tile {
+#header {
+  width: 510px;
+  margin: 0.5em auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  height: 2em; }
+
+#prev-level, #next-level {
   position: relative;
+  background: #ddd;
+  height: 2em;
+  border: none; }
+
+#prev-level {
   float: left;
+  margin-left: 10px; }
+  #prev-level:before {
+    position: absolute;
+    top: 0;
+    content: " ";
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    left: -10px;
+    border-right: 10px solid #ddd; }
+
+#next-level {
+  float: right;
+  margin-right: 10px; }
+  #next-level:after {
+    position: absolute;
+    top: 0;
+    content: " ";
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    right: -10px;
+    border-left: 10px solid #ddd; }
+
+#gameboard {
+  width: 510px;
+  margin: 0.5em auto;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: #eee;
+  line-height: 0; }
+
+.tile {
+  display: inline-block;
+  position: relative;
   border: 1px solid #ccc;
   width: 100px;
   height: 100px;
