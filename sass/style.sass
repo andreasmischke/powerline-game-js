@@ -1,6 +1,57 @@
-.tile
+=centered-container()
+  width: 510px
+  margin: .5em auto
+  padding: 1em
+  border: 1px solid #ccc
+  border-radius: 5px
+  background: #eee
+
+=button-arrow-horizontal($direction)
+  position: absolute
+  top: 0
+  content: " "
+  border-top: 1em solid transparent
+  border-bottom: 1em solid transparent
+  @if $direction == "left"
+    left: -10px
+    border-right: 10px solid $next_prev_color
+  @else
+    right: -10px
+    border-left: 10px solid $next_prev_color
+
+#header
+  +centered-container()
+  height: 2em
+
+$next_prev_color: #ddd
+
+#prev-level, #next-level
   position: relative
+  background: $next_prev_color
+  height: 2em
+  border: none
+
+#prev-level
   float: left
+  margin-left: 10px
+
+  &:before
+    +button-arrow-horizontal(left)
+
+#next-level
+  float: right
+  margin-right: 10px
+
+  &:after
+    +button-arrow-horizontal(right)
+
+#gameboard
+  +centered-container()
+  line-height: 0
+
+.tile
+  display: inline-block
+  position: relative
   border: 1px solid #ccc
   width: 100px
   height: 100px
