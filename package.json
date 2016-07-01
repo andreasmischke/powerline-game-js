@@ -1,0 +1,30 @@
+{
+  "name": "powerline-game-js",
+  "version": "1.0.0",
+  "description": "Javascript clone of the android game powerline: https://play.google.com/store/apps/details?id=com.nebulabytes.powerflow",
+  "main": "dist/index.htm",
+  "dependencies": {},
+  "devDependencies": {
+    "uglify-js": "^2.6.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreasmischke/powerline-game-js.git"
+  },
+  "keywords": [
+    "powerline",
+    "game",
+    "js",
+    "strategy",
+    "puzzle"
+  ],
+  "author": "Andreas Mischke <andreas@mischke.me>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andreasmischke/powerline-game-js/issues"
+  },
+  "homepage": "https://github.com/andreasmischke/powerline-game-js#readme"
+}
