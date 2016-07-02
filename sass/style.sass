@@ -1,10 +1,26 @@
-=centered-container()
-  width: 510px
+=media-break-sm
+  @media screen and (max-width: 320px)
+    @content
+
+=media-break-md
+  @media screen and (max-width: 500px)
+    @content
+
+.centered-container
+  width: 500px
   margin: .5em auto
-  padding: 1em
+  padding: 10px
   border: 1px solid #ccc
   border-radius: 5px
   background: #eee
+  box-sizing: border-box
+
+  +media-break-md
+    width: 100vmin
+    box-sizing: border-box
+
+  +media-break-sm
+    width: 320px
 
 =button-arrow-horizontal($direction)
   position: absolute
@@ -19,44 +35,78 @@
     right: -10px
     border-left: 10px solid $next_prev_color
 
+body
+  margin: 0
+  padding: 0
+  font-family: sans-serif
+
 #header
-  +centered-container()
-  height: 2em
+  display: flex
+
+  +media-break-sm
+    padding: 9px
+
+.header-block
+  display: inline-block
+  line-height: 2em
+
+  &.left
+    flex: 1
+
+  &.center
+    flex: 2
+    text-align: center
+
+  &.right
+    flex: 1
+    text-align: right
+
+#move-count
+  font-size: .75em
 
 $next_prev_color: #ddd
 
-#prev-level, #next-level
+#level-btn
   position: relative
   background: $next_prev_color
   height: 2em
   border: none
 
-#prev-level
-  float: left
+#level-btn
   margin-left: 10px
 
   &:before
     +button-arrow-horizontal(left)
 
-#next-level
-  float: right
-  margin-right: 10px
-
-  &:after
-    +button-arrow-horizontal(right)
-
 #gameboard
-  +centered-container()
   line-height: 0
+  text-align: center
+
+  +media-break-md
+    height: 100vmin
+    padding: 2vmin
+
+  +media-break-sm
+    height: 320px
+    padding: 9px
 
 .tile
   display: inline-block
   position: relative
   border: 1px solid #ccc
-  width: 100px
-  height: 100px
+  width: 95px
+  height: 95px
   background: #7f7f7f
-  // background-image: url(img/sprite.png)
+  box-sizing: border-box
+
+  +media-break-md
+    width: 19vmin
+    height: 19vmin
+    box-sizing: border-box
+
+  +media-break-sm
+    width: 60px
+    height: 60px
 
   div
     position: absolute

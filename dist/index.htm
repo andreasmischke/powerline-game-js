@@ -3,14 +3,22 @@
 <head>
   <title>Powerline Game</title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, max-scale=1.0, min-scale=1.0" />
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <div id="header">
-    <button id="prev-level">Previous Level</button>
-    <button id="next-level">Next Level</button>
+  <div id="header" class="centered-container">
+    <div class="header-block left">
+      <button id="level-btn">Levels</button>
+    </div>
+    <div class="header-block center">
+      <span id="title">Level 1</span>
+    </div>
+    <div class="header-block right">
+      <span id="move-count">0 moves</span>
+    </div>
   </div>
-  <div id="gameboard"></div>
+  <div id="gameboard" class="centered-container"></div>
   <script src="app.min.js"></script>
 </body>
 </html>
