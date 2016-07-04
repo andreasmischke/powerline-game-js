@@ -1,0 +1,47 @@
+.tile
+  display: inline-block
+  position: relative
+  border: 1px solid #ccc
+  width: 95px
+  height: 95px
+  background: #7f7f7f
+  box-sizing: border-box
+
+  +media-break-md
+    width: 19vmin
+    height: 19vmin
+    box-sizing: border-box
+
+  +media-break-sm
+    width: 60px
+    height: 60px
+
+  div
+    position: absolute
+
+  &[data-power="0"] div
+    background: #c3c3c3
+
+  &[data-power="1"] div
+    background: #fff200
+    box-shadow: 0 0 10px 0 rgba(255, 242, 0, 1)
+
+@import tile_I
+@import tile_L
+@import tile_O
+@import tile_T
+
+.house:after, .factory:after
+  position: absolute
+  display: block
+  content: ""
+  width: 100%
+  height: 100%
+  background-repeat: no-repeat
+  background-image: url(img/sprite.png)
+
+.house:after
+  background-position: -100px -400px
+
+.factory:after
+  background-position: 0 -400px

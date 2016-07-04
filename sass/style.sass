@@ -90,95 +90,10 @@ $next_prev_color: #ddd
     height: 320px
     padding: 9px
 
-.tile
-  display: inline-block
-  position: relative
-  border: 1px solid #ccc
-  width: 95px
-  height: 95px
-  background: #7f7f7f
-  box-sizing: border-box
-
-  +media-break-md
-    width: 19vmin
-    height: 19vmin
-    box-sizing: border-box
-
-  +media-break-sm
-    width: 60px
-    height: 60px
-
-  div
-    position: absolute
-
-  &[data-power="0"] div
-    background: #c3c3c3
-
-  &[data-power="1"] div
-    background: #fff200
-    box-shadow: 0 0 10px 0 rgba(255, 242, 0, 1)
-
-.tile[data-layout="I"] 
-  div:first-child
-    top: 0
-    left: 40%
-    width: 20%
-    height: 100%
-
-  div:last-child
-    display: none
+@import tiles
 
 
-.tile[data-layout="L"]
-  div:first-child
-    top: 0
-    left: 40%
-    width: 20%
-    height: 60%
 
-  div:last-child
-    top: 40%
-    left: 60%
-    width: 40%
-    height: 20%
-
-.tile[data-layout="O"]
-  div:first-child
-    top: 0
-    left: 40%
-    width: 20%
-    height: 60%
-
-  div:last-child
-    display: none
-
-.tile[data-layout="T"]
-  div:first-child
-    top: 0
-    left: 40%
-    width: 20%
-    height: 100% 
-
-  div:last-child
-    top: 40%
-    left: 60%
-    width: 40%
-    height: 20%
-
-.tile[data-rotation="90"]
-  transform: rotate(90deg)
-.tile[data-rotation="90"]:after
-  transform: rotate(-90deg)
-
-.tile[data-rotation="180"]
-  transform: rotate(180deg)
-.tile[data-rotation="180"]:after
-  transform: rotate(-180deg)
-
-.tile[data-rotation="270"]
-  transform: rotate(270deg)
-.tile[data-rotation="270"]:after
-  transform: rotate(-270deg)
 
 .house:after, .factory:after
   position: absolute

@@ -1,0 +1,26 @@
+.tile[data-layout="L"]
+
+  div:first-child
+    top: 0
+    left: 40%
+    width: 20%
+    height: 60%
+
+
+  div:last-child
+    top: 40%
+    left: 0
+    width: 40%
+    height: 20%
+
+  &[data-rotation="0"]
+    div:last-child
+      left: 60%
+  &[data-rotation="90"]
+    div:first-child
+      top: 40%
+    div:last-child
+      left: 60%
+  &[data-rotation="180"]
+    div:first-child
+      top: 40%

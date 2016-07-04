@@ -1,0 +1,34 @@
+.tile[data-layout="O"]
+
+  div:first-child
+    display: none
+    left: 40%
+    width: 20%
+    height: 60%
+
+  div:last-child
+    display: none
+    top: 40%
+    width: 60%
+    height: 20%
+
+  &[data-rotation="0"]
+    div:first-child
+      display: block
+      top: 0
+
+  &[data-rotation="90"]
+    div:last-child
+      display: block
+      left: 40%
+
+  &[data-rotation="180"]
+    div:first-child
+      display: block
+      top: 40%
+
+  &[data-rotation="270"]
+    div:last-child
+      display: block
+      left: 0
+
