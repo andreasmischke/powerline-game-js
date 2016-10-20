@@ -3,9 +3,9 @@
 _Javascript clone of the android game powerline:
 https://play.google.com/store/apps/details?id=com.nebulabytes.powerflow_
 
-I used to play a lot of the 
+I used to play the 
 [original Android game](https://play.google.com/store/apps/details?id=com.nebulabytes.powerflow)
-and wondered how this was implemented. So I simply tried by myself and implemented it in JavaScript.
+a lot and wondered how this was implemented. So I simply tried by myself and implemented it in JavaScript.
 
 In particular I concentrated on the following aspects:
 
